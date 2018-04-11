@@ -18,6 +18,14 @@ entry with name `AutoRun`. Add the **full path** to the [envkey.cmd file](envkey
 If you are inside a git project you will be able to see the branch name 
 in the prompt.
 
+## How it works?
+I created [this file](winrc.cmd) to modify the Windows prompt to show the branch name if the current directory is a git
+project. Then I created a `DOSKEY` called `cd` that actually calls:
+```bash
+$ DOSKEY cd=cd $* ^&^& %~dp0\winrc.cmd
+```
+> **Note** This line is the actuall content of [envkey.cmd](envkey.cmd) file
+
 ### References
 * https://stackoverflow.com/questions/20530996/aliases-in-windows-command-prompt
 * https://stackoverflow.com/questions/12028372/how-to-change-command-line-prompt-in-windows
@@ -27,7 +35,7 @@ in the prompt.
 ```
 The MIT License (MIT)
 
-Copyright (c) 2017 Newhouse
+Copyright (c) 2018 Javi <nhitbh at gmail dot com>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
