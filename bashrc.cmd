@@ -1,6 +1,5 @@
 @echo off
 
-cd %cd%
 set GIT_BRANCH=
 
 REM Execute git branch command and redirect stderr to NUL
