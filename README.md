@@ -19,10 +19,11 @@ If you are inside a git project you will be able to see the branch name
 in the prompt.
 
 ## How it works?
-I created [this file](winrc.cmd) to modify the Windows prompt to show the branch name if the current directory is a git
-project. Then I created a `DOSKEY` called `cd` that actually calls:
+I created [this file](winrc.cmd) to modify the Windows prompt to show the branch name of the current git
+project (if any). Then I created two `DOSKEY`, called `cd` and `git`:
 ```bash
-$ DOSKEY cd=cd $* ^&^& %~dp0\winrc.cmd
+DOSKEY cd=cd $* ^&^& %~dp0\winrc.cmd
+DOSKEY git=git $* ^&^& %~dp0\winrc.cmd
 ```
 > **Note** This line is the actuall content of [envkey.cmd](envkey.cmd) file
 
