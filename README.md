@@ -5,6 +5,10 @@ if you are on a `git` project.
 
 ![](demo.gif)
 
+Another demo changing the git branch
+
+![](demo1.gif)
+
 ## How I can install it?
 Clone this repo
 ```bash
