@@ -35,6 +35,7 @@ DOSKEY git=git $* ^&^& %~dp0\winrc.cmd
 * https://stackoverflow.com/questions/20530996/aliases-in-windows-command-prompt
 * https://stackoverflow.com/questions/12028372/how-to-change-command-line-prompt-in-windows
 * http://www.hanselman.com/blog/ABetterPROMPTForCMDEXEOrCoolPromptEnvironmentVariablesAndANiceTransparentMultiprompt.aspx
+* http://ascii-table.com/ansi-escape-sequences.php
 
 ## License
 ```
