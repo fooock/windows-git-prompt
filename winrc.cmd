@@ -6,6 +6,9 @@ REM Execute git branch command and redirect stderr to NUL
 REM Note that we need to escape the redirectiond and pipe command 
 REM to make the script work
 FOR /f "tokens=2" %%a in ('git branch 2^> NUL ^| FINDSTR /b "* "') do set GIT_BRANCH=%%a
+
+:: Detect if the user is currently using anu virtual env
+SET CURRENT_ENV=%CONDA_DEFAULT_ENV%
 IF [%GIT_BRANCH%] == [] ( GOTO :prompt ) ELSE ( GOTO :custom )
 
 :custom
